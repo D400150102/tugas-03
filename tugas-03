@@ -1,0 +1,611 @@
+ #include<stdio.h> 
+2 #include<string.h> 
+3 #include<math.h> 
+4 
+ 
+5 void hitung_3gelang() 
+6 { 
+7     int G1=0, G2=0, G3=0; 
+8     int N=0; 
+9     char WARNA[20]; 
+10 
+ 
+11     for (N=1; N<=3; N++) 
+12     { 
+13         printf(" Masukkan warna GELANG ke %d : ", N); 
+14         scanf("%s", WARNA); 
+15         if(strcmp(WARNA, "hitam")==0) 
+16         { 
+17             switch(N) 
+18             { 
+19                 case 1: G1=0; break; 
+20                 case 2: G2=0; break; 
+21                 case 3: G3=pow(10,0); break; 
+22             } 
+23         } 
+24         else if(strcmp(WARNA, "coklat")==0) 
+25         { 
+26             switch(N) 
+27             { 
+28                 case 1: G1=1; break; 
+29                 case 2: G2=1; break; 
+30                 case 3: G3=pow(10,1); break; 
+31             } 
+32         } 
+33         else if(strcmp(WARNA, "merah")==0) 
+34         { 
+35             switch(N) 
+36             { 
+37                 case 1: G1=2; break; 
+38                 case 2: G2=2; break; 
+39                 case 3: G3=pow(10,2); break; 
+40             } 
+41         } 
+42         else if(strcmp(WARNA, "orange")==0) 
+43         { 
+44             switch(N) 
+45             { 
+46                 case 1: G1=3; break; 
+47                 case 2: G2=3; break; 
+48                 case 3: G3=pow(10,3); break; 
+49             } 
+50         } 
+51         else if(strcmp(WARNA, "kuning")==0) 
+52         { 
+53             switch(N) 
+54             { 
+55                 case 1: G1=4; break; 
+56                 case 2: G2=4; break; 
+57                 case 3: G3=pow(10,4); break; 
+58             } 
+59         } 
+60          else if(strcmp(WARNA, "hijau")==0) 
+61         { 
+62             switch(N) 
+63             { 
+64                 case 1: G1=5; break; 
+65                 case 2: G2=5; break; 
+66                 case 3: G3=pow(10,5); break; 
+67             } 
+68         } 
+69         else if(strcmp(WARNA, "biru")==0) 
+70         { 
+71             switch(N) 
+72             { 
+73                 case 1: G1=6; break; 
+74                 case 2: G2=6; break; 
+75                 case 3: G3=pow(10,6); break; 
+76             } 
+77         } 
+78         else if(strcmp(WARNA, "ungu")==0) 
+79         { 
+80             switch(N) 
+81             { 
+82                 case 1: G1=7; break; 
+83                 case 2: G2=7; break; 
+84                 case 3: G3=pow(10,7); break; 
+85             } 
+86         } 
+87         else if(strcmp(WARNA, "abu-abu")==0) 
+88         { 
+89             switch(N) 
+90             { 
+91                 case 1: G1= 8; break; 
+92                 case 2: G2=8; break; 
+93                 case 3: G3=pow(10,8); break; 
+94             } 
+95         } 
+96         else if(strcmp(WARNA, "putih")==0) 
+97         { 
+98             switch(N) 
+99             { 
+100                 case 1: G1=9; break; 
+101                 case 2: G2=9; break; 
+102                 case 3: G3=pow(10,9); break; 
+103             } 
+104         } 
+105          else if(strcmp(WARNA, "emas")==0) 
+106         { 
+107             switch(N) 
+108             { 
+109                case 3: G3=pow(10,-1); break; 
+110             } 
+111         } 
+112          else if(strcmp(WARNA, "perak")==0) 
+113         { 
+114             switch(N) 
+115             { 
+116                case 3: G3=pow(10,-2); break; 
+117             } 
+118         } 
+119     } 
+120     N=((G1*10)+G2)*G3; 
+121     printf("\nNilai resistor R = %d ohm", N); 
+122 } 
+123 
+ 
+124 void hitung_4gelang() 
+125 { 
+126     int G1=0, G2=0, G3=0, G4=0; 
+127     int N=0; 
+128     char WARNA[20]; 
+129     char p= '%'; 
+130 
+ 
+131     for (N=1; N<=4; N++) 
+132     { 
+133         printf(" Masukkan warna GELANG ke %d : ", N); 
+134         scanf("%s", WARNA); 
+135         if(strcmp(WARNA, "hitam")==0) 
+136         { 
+137             switch(N) 
+138             { 
+139                 case 1: G1=0; break; 
+140                 case 2: G2=0; break; 
+141                 case 3: G3=pow(10,0); break; 
+142                 case 4: G4=0; break; 
+143             } 
+144         } 
+145         else if(strcmp(WARNA, "coklat")==0) 
+146         { 
+147             switch(N) 
+148             { 
+149                 case 1: G1=1; break; 
+150                 case 2: G2=1; break; 
+151                 case 3: G3=pow(10,1); break; 
+152                 case 4: G4=1; break; 
+153             } 
+154         } 
+155         else if(strcmp(WARNA, "merah")==0) 
+156         { 
+157             switch(N) 
+158             { 
+159                 case 1: G1=2; break; 
+160                 case 2: G2=2; break; 
+161                 case 3: G3=pow(10,2); break; 
+162                 case 4: G4=2; break; 
+163             } 
+164         } 
+165         else if(strcmp(WARNA, "orange")==0) 
+166         { 
+167             switch(N) 
+168             { 
+169                 case 1: G1=3; break; 
+170                 case 2: G2=3; break; 
+171                 case 3: G3=pow(10,3); break; 
+172                 case 4: G4=0; break; 
+173             } 
+174         } 
+175         else if(strcmp(WARNA, "kuning")==0) 
+176         { 
+177             switch(N) 
+178             { 
+179                 case 1: G1=4; break; 
+180                 case 2: G2=4; break; 
+181                 case 3: G3=pow(10,4); break; 
+182                 case 4: G4=0; break; 
+183             } 
+184         } 
+185          else if(strcmp(WARNA, "hijau")==0) 
+186         { 
+187             switch(N) 
+188             { 
+189                 case 1: G1=5; break; 
+190                 case 2: G2=5; break; 
+191                 case 3: G3=pow(10,5); break; 
+192                 case 4: G4=0.5; break; 
+193             } 
+194         } 
+195         else if(strcmp(WARNA, "biru")==0) 
+196         { 
+197             switch(N) 
+198             { 
+199                 case 1: G1=6; break; 
+200                 case 2: G2=6; break; 
+201                 case 3: G3=pow(10,6); break; 
+202                 case 4: G4=0.25; break; 
+203             } 
+204         } 
+205         else if(strcmp(WARNA, "ungu")==0) 
+206         { 
+207             switch(N) 
+208             { 
+209                 case 1: G1=7; break; 
+210                 case 2: G2=7; break; 
+211                 case 3: G3=pow(10,7); break; 
+212                 case 4: G4=0.1; break; 
+213             } 
+214         } 
+215         else if(strcmp(WARNA, "abu-abu")==0) 
+216         { 
+217             switch(N) 
+218             { 
+219                 case 1: G1=8; break; 
+220                 case 2: G2=8; break; 
+221                 case 3: G3=pow(10,8); break; 
+222                 case 4: G4=0.05; break; 
+223             } 
+224         } 
+225         else if(strcmp(WARNA, "putih")==0) 
+226         { 
+227             switch(N) 
+228             { 
+229                 case 1: G1=9; break; 
+230                 case 2: G2=9; break; 
+231                 case 3: G3=pow(10,9); break; 
+232                 case 4: G4=0; break; 
+233             } 
+234         } 
+235          else if(strcmp(WARNA, "emas")==0) 
+236         { 
+237             switch(N) 
+238             { 
+239                case 3: G3=pow(10,-1); break; 
+240                case 4: G4=5; break; 
+241             } 
+242         } 
+243          else if(strcmp(WARNA, "perak")==0) 
+244         { 
+245             switch(N) 
+246             { 
+247                case 3: G3=pow(10,-2); break; 
+248                case 4: G4=10; break; 
+249             } 
+250         } 
+251         else if(strcmp(WARNA, "tak berwarna")==0) 
+252         { 
+253             switch(N) 
+254             { 
+255                case 4: G4=20; break; 
+256             } 
+257         } 
+258     } 
+259     N=((G1*10)+G2)*G3; 
+260     printf("\nNilai resistor %d ohm dengan toleransi %d%c", N, G4, p); 
+261 } 
+262 
+ 
+263 void hitung_5gelang() 
+264 { 
+265     int G1=0, G2=0, G3=0, G4=0, G5=0; 
+266     int N=0; 
+267     char WARNA[20]; 
+268     char p= '%'; 
+269 
+ 
+270     for (N=1; N<=5; N++) 
+271     { 
+272         printf(" Masukkan warna GELANG ke %d : ", N); 
+273         scanf("%s", WARNA); 
+274         if(strcmp(WARNA, "hitam")==0) 
+275         { 
+276             switch(N) 
+277             { 
+278                 case 1: G1=0; break; 
+279                 case 2: G2=0; break; 
+280                 case 3: G3=0; break; 
+281                 case 4: G4=pow(10,0); break; 
+282                 case 5: G5=1; break; 
+283             } 
+284         } 
+285         else if(strcmp(WARNA, "coklat")==0) 
+286         { 
+287             switch(N) 
+288             { 
+289                 case 1: G1=1; break; 
+290                 case 2: G2=1; break; 
+291                 case 3: G3=1; break; 
+292                 case 4: G4=pow(10,1); break; 
+293                 case 5: G5=2; break; 
+294             } 
+295         } 
+296         else if(strcmp(WARNA, "merah")==0) 
+297         { 
+298             switch(N) 
+299             { 
+300                 case 1: G1=2; break; 
+301                 case 2: G2=2; break; 
+302                 case 3: G3=2; break; 
+303                 case 4: G4=pow(10,2); break; 
+304                 case 5: G5=3; break; 
+305             } 
+306         } 
+307         else if(strcmp(WARNA, "orange")==0) 
+308         { 
+309             switch(N) 
+310             { 
+311                 case 1: G1=3; break; 
+312                 case 2: G2=3; break; 
+313                 case 3: G3=3; break; 
+314                 case 4: G4=pow(10,3); break; 
+315                 case 5: G5=4; break; 
+316             } 
+317         } 
+318         else if(strcmp(WARNA, "kuning")==0) 
+319         { 
+320             switch(N) 
+321             { 
+322                 case 1: G1=4; break; 
+323                 case 2: G2=4; break; 
+324                 case 3: G3=4; break; 
+325                 case 4: G4=pow(10,4); break; 
+326                 case 5: G5=0; break; 
+327             } 
+328         } 
+329          else if(strcmp(WARNA, "hijau")==0) 
+330         { 
+331             switch(N) 
+332             { 
+333                 case 1: G1=5; break; 
+334                 case 2: G2=5; break; 
+335                 case 3: G3=5; break; 
+336                 case 4: G4=pow(10,5); break; 
+337                 case 5: G5=0.5; break; 
+338             } 
+339         } 
+340         else if(strcmp(WARNA, "biru")==0) 
+341         { 
+342             switch(N) 
+343             { 
+344                 case 1: G1=6; break; 
+345                 case 2: G2=6; break; 
+346                 case 3: G3=6; break; 
+347                 case 4: G4=pow(10,6); break; 
+348                 case 5: G5=0.25; break; 
+349             } 
+350         } 
+351         else if(strcmp(WARNA, "ungu")==0) 
+352         { 
+353             switch(N) 
+354             { 
+355                 case 1: G1=7; break; 
+356                 case 2: G2=7; break; 
+357                 case 3: G3=7; break; 
+358                 case 4: G4=pow(10,7); break; 
+359                 case 5: G5=0.1; break; 
+360             } 
+361         } 
+362         else if(strcmp(WARNA, "abu-abu")==0) 
+363         { 
+364             switch(N) 
+365             { 
+366                 case 1: G1=8; break; 
+367                 case 2: G2=8; break; 
+368                 case 3: G3=8; break; 
+369                 case 4: G4=pow(10,8); break; 
+370                 case 5: G5=0.05; break; 
+371             } 
+372         } 
+373         else if(strcmp(WARNA, "putih")==0) 
+374         { 
+375             switch(N) 
+376             { 
+377                 case 1: G1=9; break; 
+378                 case 2: G2=9; break; 
+379                 case 3: G3=9; break; 
+380                 case 4: G4=pow(10,9); break; 
+381                 case 5: G5=0; break; 
+382             } 
+383         } 
+384          else if(strcmp(WARNA, "emas")==0) 
+385         { 
+386             switch(N) 
+387             { 
+388                case 4: G4=pow(10,-1); break; 
+389                case 5: G5=5; break; 
+390             } 
+391         } 
+392          else if(strcmp(WARNA, "perak")==0) 
+393         { 
+394             switch(N) 
+395             { 
+396                case 4: G4=pow(10,-2); break; 
+397                case 5: G5=10; break; 
+398             } 
+399         } 
+400         else if(strcmp(WARNA, "tak berwarna")==0) 
+401         { 
+402             switch(N) 
+403             { 
+404                case 5: G5=20; break; 
+405             } 
+406         } 
+407     } 
+408     N=(((G1*100)+(G2*10))+G3)*G4; 
+409     printf("\nNilai resistor %d ohm dengan toleransi %d%c", N, G5, p); 
+410 } 
+411 
+ 
+412 void hitung_6gelang() 
+413 { 
+414     int G1=0, G2=0, G3=0, G4=0, G5=0, G6=0; 
+415     int N=0; 
+416     char WARNA[20]; 
+417     char p= '%'; 
+418 
+ 
+419     for (N=1; N<=6; N++) 
+420     { 
+421         printf(" Masukkan warna GELANG ke %d : ", N); 
+422         scanf("%s", WARNA); 
+423         if(strcmp(WARNA, "hitam")==0) 
+424         { 
+425             switch(N) 
+426             { 
+427                 case 1: G1=0; break; 
+428                 case 2: G2=0; break; 
+429                 case 3: G3=0; break; 
+430                 case 4: G4=pow(10,0); break; 
+431                 case 5: G5=0; break; 
+432                 case 6: G6=250; break; 
+433             } 
+434         } 
+435         else if(strcmp(WARNA, "coklat")==0) 
+436         { 
+437             switch(N) 
+438             { 
+439                 case 1: G1=1; break; 
+440                 case 2: G2=1; break; 
+441                 case 3: G3=1; break; 
+442                 case 4: G4=pow(10,1); break; 
+443                 case 5: G5=1; break; 
+444                 case 6: G6=100; break; 
+445             } 
+446         } 
+447         else if(strcmp(WARNA, "merah")==0) 
+448         { 
+449             switch(N) 
+450             { 
+451                 case 1: G1=2; break; 
+452                 case 2: G2=2; break; 
+453                 case 3: G3=2; break; 
+454                 case 4: G4=pow(10,2); break; 
+455                 case 5: G5=2; break; 
+456                 case 6: G6=50; break; 
+457             } 
+458         } 
+459         else if(strcmp(WARNA, "orange")==0) 
+460         { 
+461             switch(N) 
+462             { 
+463                 case 1: G1=3; break; 
+464                 case 2: G2=3; break; 
+465                 case 3: G3=3; break; 
+466                 case 4: G4=pow(10,3); break; 
+467                 case 5: G5=0; break; 
+468                 case 6: G6=15; break; 
+469             } 
+470         } 
+471         else if(strcmp(WARNA, "kuning")==0) 
+472         { 
+473             switch(N) 
+474             { 
+475                 case 1: G1=4; break; 
+476                 case 2: G2=4; break; 
+477                 case 3: G3=4; break; 
+478                 case 4: G4=pow(10,4); break; 
+479                 case 5: G5=0; break; 
+480                 case 6: G6=25; break; 
+481             } 
+482         } 
+483          else if(strcmp(WARNA, "hijau")==0) 
+484         { 
+485             switch(N) 
+486             { 
+487                 case 1: G1=5; break; 
+488                 case 2: G2=5; break; 
+489                 case 3: G3=5; break; 
+490                 case 4: G4=pow(10,5); break; 
+491                 case 5: G5=0.5; break; 
+492                 case 6: G6=20; break; 
+493             } 
+494         } 
+495         else if(strcmp(WARNA, "biru")==0) 
+496         { 
+497             switch(N) 
+498             { 
+499                 case 1: G1=6; break; 
+500                 case 2: G2=6; break; 
+501                 case 3: G3=6; break; 
+502                 case 4: G4=pow(10,6); break; 
+503                 case 5: G5=0.25; break; 
+504                 case 6: G6=10; break; 
+505             } 
+506         } 
+507         else if(strcmp(WARNA, "ungu")==0) 
+508         { 
+509             switch(N) 
+510             { 
+511                 case 1: G1=7; break; 
+512                 case 2: G2=7; break; 
+513                 case 3: G3=7; break; 
+514                 case 4: G4=pow(10,7); break; 
+515                 case 5: G5=0.1; break; 
+516                 case 6: G6=5; break; 
+517             } 
+518         } 
+519         else if(strcmp(WARNA, "abu-abu")==0) 
+520         { 
+521             switch(N) 
+522             { 
+523                 case 1: G1=8; break; 
+524                 case 2: G2=8; break; 
+525                 case 3: G3=8; break; 
+526                 case 4: G4=pow(10,8); break; 
+527                 case 5: G5=0.05; break; 
+528                 case 6: G6=1; break; 
+529             } 
+530         } 
+531         else if(strcmp(WARNA, "putih")==0) 
+532         { 
+533             switch(N) 
+534             { 
+535                 case 1: G1=9; break; 
+536                 case 2: G2=9; break; 
+537                 case 3: G3=9; break; 
+538                 case 4: G4=pow(10,9); break; 
+539                 case 5: G5=0; break; 
+540                 case 6: G6=0; break; 
+541             } 
+542         } 
+543          else if(strcmp(WARNA, "emas")==0) 
+544         { 
+545             switch(N) 
+546             { 
+547                case 4: G4=pow(10,-1); break; 
+548                case 5: G5=5; break; 
+549             } 
+550         } 
+551          else if(strcmp(WARNA, "perak")==0) 
+552         { 
+553             switch(N) 
+554             { 
+555                case 4: G4=pow(10,-2); break; 
+556                case 5: G5=10; break; 
+557             } 
+558         } 
+559         else if(strcmp(WARNA, "tak berwarna")==0) 
+560         { 
+561             switch(N) 
+562             { 
+563                case 5: G5=20; break; 
+564             } 
+565         } 
+566     } 
+567     N=((((G1*100)+(G2*10))+G3)*G4); 
+568     printf("\nNilai resistor %d ohm dengan toleransi %d%c %d ppm/K", N,G5,p,G6); 
+569 } 
+570 
+ 
+571 int main() 
+572 { 
+573     int GELANG = 0; 
+574     while((GELANG<3)||(GELANG>6)) 
+575     { 
+576         printf("Masukkan jumlah gelang : "); 
+577         scanf("%d",&GELANG); 
+578         if((GELANG<3) || (GELANG>6)) 
+579         { 
+580             printf("\n==========================="); 
+581             printf("\nNilai GELANG antara 3 s/d 6"); 
+582             printf("/n===========================\n"); 
+583         } 
+584         if(GELANG==3) 
+585         { 
+586             hitung_3gelang(); 
+587         } 
+588         else if(GELANG==4) 
+589         { 
+590             hitung_4gelang(); 
+591         } 
+592         else if(GELANG==5) 
+593         { 
+594             hitung_5gelang(); 
+595         } 
+596         else if(GELANG==6) 
+597         { 
+598             hitung_6gelang(); 
+599         } 
+600     } 
+601     return 0; 
+602 } 
